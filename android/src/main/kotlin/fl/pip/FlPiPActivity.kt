@@ -48,7 +48,7 @@ open class FlPiPActivity : FlutterFragmentActivity() {
 
 
     override fun onPictureInPictureModeChanged(
-        isInPictureInPictureMode: Boolean, newConfig: Configuration?
+        isInPictureInPictureMode: Boolean, newConfig: Configuration
     ) {
         super.onPictureInPictureModeChanged(isInPictureInPictureMode, newConfig)
         PiPPlugin.setPiPStatus(if (isInPictureInPictureMode) 0 else 1)
