@@ -41,9 +41,9 @@ import io.flutter.plugin.common.MethodChannel
 
 
 open class FlPiPActivity : FlutterFragmentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        flutterEngine?.plugins?.add(PiPPlugin())
+    override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
+        super.configureFlutterEngine(flutterEngine)
+        flutterEngine.plugins.add(PiPPlugin())
     }
 
 
